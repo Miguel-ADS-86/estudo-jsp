@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 import dao.Dao_usuario_repository;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
+//import jakarta.servlet.http.HttpSession;
 
 public class ControleLogin {
    // aqui vou criar um metodo statico para poder chamar no dao 

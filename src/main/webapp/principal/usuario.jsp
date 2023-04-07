@@ -77,6 +77,9 @@
                                             </div>
                                             </div>
                                             <span id="msg">${msg}</span>
+                                            
+                                         <div class="card" ><!-- inicio card -->
+                                        <!-- CARREGA DADOS NO BODY ABAIXO DO FORMULARIO -->
 										<div style="height: 300px; overflow: scroll;">
 											<!--tabela-->
 											<table class="table" id="tabelaresultadosView">
@@ -93,13 +96,16 @@
 															<td><c:out value="${ml.id_login}"></c:out></td>
 															<td><c:out value="${ml.nome}"></c:out> </td>
 															<td><a class="btn btn-success" href="<%= request.getContextPath() %>/ServletUsuarioController?acao=editUser&id=${ml.id_login}">
-															 Ver </a></td>
+															 Ver </a>
+															 <a class="btn btn-danger" href="<%= request.getContextPath() %>/ServletUsuarioController?acao=deletar&id_login=${ml.id_login}">
+															 Excluir </a></td>
 														</tr>
 													</c:forEach>
 												</tbody>
 											</table>
 										</div>
 									</div>
+									</div><!-- divcard -->
 									<!-- Page-body end -->
 								</div>
 								<div id="styleSelector"></div>
