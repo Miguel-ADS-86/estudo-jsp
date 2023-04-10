@@ -50,8 +50,8 @@ public class ServletUsuarioController extends HttpServlet {
 	    		Dao_usuario_repository dao = new Dao_usuario_repository();
 	    		dao.ExcluirLogin(idUser);
 	    		response.getWriter().write("Excluido com sucesso!"); 
-	    		/* TODO ajustar o deletar para quando excluir atualizar a lista 
-	    		 * */
+	    		List<ModelLogin> logins = user_repository.listarUsuarios(ControleLogin.getUser(request));
+	            request.setAttribute("logins",logins);
 	    		
 	    	}else if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("buscarAjax")) {
 	    		String login = request.getParameter("busca");

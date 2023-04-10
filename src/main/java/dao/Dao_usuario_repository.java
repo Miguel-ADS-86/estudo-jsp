@@ -87,7 +87,7 @@ public class Dao_usuario_repository {
 	//atençao aqui para o possivel erro
 	public ModelLogin consularUsuario(String login) throws SQLException {
 		ModelLogin model = new ModelLogin();
-		String sql = "select * from model_login where loginn = ? and isLogin != 1";
+		String sql = "select * from model_login where loginn = ?";
 		PreparedStatement stm = connection.prepareStatement(sql);
 		stm.setString(1, login);
 		ResultSet rs = stm.executeQuery();
